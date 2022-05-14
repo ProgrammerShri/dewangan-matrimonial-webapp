@@ -3,27 +3,13 @@ import axios from "axios";
 import { baseURL_API } from "../../utils/constants";
 import TinderCard from "react-tinder-card";
 import ProfileCard from "./ProfileCard";
-import elonImg from "../../images/elon.jpg";
-import steveImg from "../../images/steve.jpg";
-import jeffImg from "../../images/jeff.jpg";
+import { posts } from "../../data.js";
 
 const ProfilesCard = () => {
-  const [profiles, setProfiles] = React.useState([]);
-
-  React.useEffect(() => {
-    axios
-      .get(`${baseURL_API}/posts`)
-      .then((res) => {
-        setProfiles(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  const [profiles, setProfiles] = React.useState(posts);
 
   return (
-    <div className="h-screen overflow-hidden w-full flex bg-red-400 justify-center items-center">
+    <div className="h-screen overflow-hidden w-full flex  justify-center items-center">
       {profiles.map((profile) => {
         return (
           <TinderCard
@@ -39,6 +25,7 @@ const ProfilesCard = () => {
               title={profile.title}
               url={profile.url}
               id={profile.id}
+              age={profile.age}
               albumId={profile.albumId}
             />
           </TinderCard>
