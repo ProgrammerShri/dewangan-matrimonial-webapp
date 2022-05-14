@@ -15,25 +15,35 @@ const ProfilesCard = () => {
       .get(`${baseURL_API}/posts`)
       .then((res) => {
         setProfiles(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
-  //   {
-  //     "albumId": 60,
-  //     "id": 2971,
-  //     "title": "dicta impedit aliquid",
-  //     "url": "https://via.placeholder.com/600/79e173",
-  //     "thumbnailUrl": "https://via.placeholder.com/150/79e173"
-  // }
   return (
-    <div className=" h-full w-full flex flex-col justify-center items-center">
-      <h1>TINDER CARD</h1>
-      {/* <ProfileCard imageURL={elonImg} title="Elon Musk" age="40" /> */}
-      <ProfileCard imageURL={steveImg} title="Steve Jobs" age="60" />
-      {/* <ProfileCard imageURL={jeffImg} title="Jeff Bezos" age="50" /> */}
+    <div className="h-screen overflow-hidden w-full flex bg-red-400 justify-center items-center">
+      {profiles.map((profile) => {
+        return (
+          <TinderCard
+            key={profile.id}
+            className="swipe"
+            preventSwipe={["up", "down"]}
+            onSwipe={(direction) => console.log("You swiped:", direction)}
+            onCardLeftScreen={(myIdentifier) =>
+              console.log(myIdentifier + " left the screen")
+            }
+          >
+            <ProfileCard
+              title={profile.title}
+              url={profile.url}
+              id={profile.id}
+              albumId={profile.albumId}
+            />
+          </TinderCard>
+        );
+      })}
     </div>
   );
 };

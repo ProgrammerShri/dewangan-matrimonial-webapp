@@ -11,20 +11,17 @@ import MatchesPage from "./pages/MatchesPage";
 function App() {
   return (
     <>
-      <div className="h-screen overflow-hidden">
-        <BrowserRouter>
-          <Navbar />
-
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/matches" element={<MatchesPage />} />
-            <Route path="/explore" element={<ExplorePage />} />
-            <Route path="/favourite" element={<FavouritePage />} />
-            <Route path="/account" element={<AccountPage />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/matches" element={<MatchesPage />} />
+          <Route path="/explore" element={<ExplorePage />} />
+          <Route path="/favourite" element={<FavouritePage />} />
+          <Route path="/account" element={<AccountPage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

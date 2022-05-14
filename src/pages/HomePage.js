@@ -3,7 +3,7 @@ import ProfilesCard from "../components/profile/ProfilesCard";
 
 const HomePage = () => {
   return (
-    <div className="h-screen overflow-hidden">
+    <div className="">
       <ProfilesCard />
     </div>
   );
