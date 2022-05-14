@@ -1,7 +1,19 @@
 import "./App.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import ProfilesCard from "./components/profile/ProfilesCard";
 
 function App() {
-  return <div className="text-3xl font-bold underline">Hello world!</div>;
+  return (
+    <>
+      <div className="h-screen overflow-hidden">
+        <Navbar />
+        <ProfilesCard />
+        {/* <ProfileDetails /> */}
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 export default App;
