@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Tabs } from "antd";
+import { Link } from "react-router-dom";
 
 const TabPane = Tabs.TabPane;
 
@@ -20,8 +21,8 @@ const Footer = () => {
           className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow"
         >
           <div id="tabs" className="flex justify-between">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
             >
               <svg
@@ -68,9 +69,9 @@ const Footer = () => {
                 </g>
               </svg>
               <span className="tab tab-home block text-xs">Home</span>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/matches"
               className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
             >
               <svg
@@ -117,9 +118,9 @@ const Footer = () => {
                 </g>
               </svg>
               <span className="tab tab-kategori block text-xs">Matches</span>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/explore"
               className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
             >
               <svg
@@ -149,9 +150,9 @@ const Footer = () => {
                 </g>
               </svg>
               <span className="tab tab-explore block text-xs">Find</span>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/favourite"
               className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
             >
               <svg
@@ -197,10 +198,12 @@ const Footer = () => {
                   </g>
                 </g>
               </svg>
-              <span className="tab tab-whishlist block text-xs">Favourites</span>
-            </a>
-            <a
-              href="#"
+              <span className="tab tab-whishlist block text-xs">
+                Favourites
+              </span>
+            </Link>
+            <Link
+              to="/account"
               className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
             >
               <svg
@@ -247,7 +250,7 @@ const Footer = () => {
                 </g>
               </svg>
               <span className="tab tab-account block text-xs">Account</span>
-            </a>
+            </Link>
           </div>
         </section>
       </section>
