@@ -1,14 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Message = () => {
-  console.log("Message");
+  const navigate = useNavigate();
+  const [option, setOption] = React.useState(false);
   return (
     <div className="flex flex-col justify-start items-center h-full my-20  w-full">
       {/* Heading Section */}
       <div className=" flex justify-start items-center w-full bg-gray-900 fixed top-12 mt-1">
         <div className="flex justify-between items-center  w-full">
-          <span>
+          <span
+            onClick={() => navigate("/messages")}
+            className="cursor-pointer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -21,7 +25,7 @@ const Message = () => {
             </svg>
           </span>
           <span className="text-xl font-bold text-white"> Jhon Doe </span>
-          <span>
+          <span className="cursor-pointer" onClick={() => setOption(!option)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -34,6 +38,16 @@ const Message = () => {
               />
             </svg>
           </span>
+          {option && (
+            <span className="text-white bg-gray-800 absolute right-10 top-5 flex flex-col rounded-xl select-none ">
+              <span className="text-lg p-4 hover:bg-white hover:text-black cursor-pointer rounded-xl">
+                Report & Block
+              </span>
+              <span className="text-lg p-4 hover:bg-white hover:text-black cursor-pointer border-gray-300 rounded-xl">
+                Delete
+              </span>
+            </span>
+          )}
         </div>
       </div>
 

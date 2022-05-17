@@ -36,7 +36,7 @@ const AccountPage = () => {
       <Divider />
 
       <div className="w-full md:w-1/2">
-        <Collapse defaultActiveKey={["1"]} onChange={callback}>
+        <Collapse defaultActiveKey={[]} onChange={callback}>
           <Panel header="Basic Personal Details" key="1">
             Name : Jhon Doe
             <br />
