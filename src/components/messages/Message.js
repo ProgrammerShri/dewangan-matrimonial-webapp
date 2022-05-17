@@ -7,7 +7,7 @@ const Message = () => {
   const navigate = useNavigate();
   const [option, setOption] = React.useState(false);
   return (
-    <div className="flex flex-col justify-start items-center h-full my-20 w-full ">
+    <div className="flex flex-col justify-start items-center h-screen w-ful">
       {/* Heading Section */}
       <div className=" flex justify-start items-center w-full bg-gray-900 fixed top-0">
         <div className="flex justify-between items-center  w-full">
@@ -35,8 +35,92 @@ const Message = () => {
       </div>
 
       {/* Chat Section  */}
-      <div className="border min-h-screen overflow-y-auto">
-        <div className="mt-10 mb-16 overflow-x-hidden w-full">
+      <div className="border overflow-y-auto h-full shadow-2xl ">
+        <div className="overflow-x-hidden w-full">
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
+              this is a basic mobile chat layout, build with tailwind css
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg clearfix">
+              It will be used for a full tutorial about building a chat app with
+              vue, tailwind and firebase.
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-green-300 float-right w-3/4 mx-4 my-2 p-2 rounded-lg clearfix">
+              check my twitter to see when it will be released.
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
+              this is a basic mobile chat layout, build with tailwind css
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
+              this is a basic mobile chat layout, build with tailwind css
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg clearfix">
+              It will be used for a full tutorial about building a chat app with
+              vue, tailwind and firebase.
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-green-300 float-right w-3/4 mx-4 my-2 p-2 rounded-lg clearfix">
+              check my twitter to see when it will be released.
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
+              this is a basic mobile chat layout, build with tailwind css
+            </div>
+          </div>{" "}
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
+              this is a basic mobile chat layout, build with tailwind css
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg clearfix">
+              It will be used for a full tutorial about building a chat app with
+              vue, tailwind and firebase.
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-green-300 float-right w-3/4 mx-4 my-2 p-2 rounded-lg clearfix">
+              check my twitter to see when it will be released.
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
+              this is a basic mobile chat layout, build with tailwind css
+            </div>
+          </div>{" "}
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
+              this is a basic mobile chat layout, build with tailwind css
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg clearfix">
+              It will be used for a full tutorial about building a chat app with
+              vue, tailwind and firebase.
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-green-300 float-right w-3/4 mx-4 my-2 p-2 rounded-lg clearfix">
+              check my twitter to see when it will be released.
+            </div>
+          </div>
+          <div className="clearfix">
+            <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
+              this is a basic mobile chat layout, build with tailwind css
+            </div>
+          </div>{" "}
           <div className="clearfix">
             <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
               this is a basic mobile chat layout, build with tailwind css
