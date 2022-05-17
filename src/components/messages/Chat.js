@@ -1,7 +1,7 @@
 import { Avatar } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import HeartIcon from "../../assets/svg/HeartIcon";
+import HeartIcon from "../../assets/svgs/HeartIcon";
 
 const Chat = ({ user }) => {
   const navigate = useNavigate();

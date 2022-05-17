@@ -1,5 +1,7 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import BackIcon from "../../assets/svgs/BackIcon";
+import ThreeDotIcon from "../../assets/svgs/ThreeDotIcon";
 
 const Message = () => {
   const navigate = useNavigate();
@@ -13,30 +15,11 @@ const Message = () => {
             onClick={() => navigate("/messages")}
             className="cursor-pointer"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              className="w-12 h-12 my-1 text-green-100 ml-2"
-            >
-              <path
-                className="text-green-100 fill-current"
-                d="M9.41 11H17a1 1 0 0 1 0 2H9.41l2.3 2.3a1 1 0 1 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.42 1.4L9.4 11z"
-              />
-            </svg>
+            <BackIcon />
           </span>
           <span className="text-xl font-bold text-white"> Jhon Doe </span>
           <span className="cursor-pointer" onClick={() => setOption(!option)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              className="icon-dots-vertical w-8 h-8 mt-2 mr-2"
-            >
-              <path
-                className="text-green-100 fill-current"
-                fillRule="evenodd"
-                d="M12 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
-              />
-            </svg>
+            <ThreeDotIcon />
           </span>
           {option && (
             <span className="text-white bg-gray-800 absolute right-10 top-5 flex flex-col rounded-xl select-none ">
