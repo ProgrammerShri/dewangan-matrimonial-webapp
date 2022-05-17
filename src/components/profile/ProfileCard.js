@@ -3,6 +3,8 @@
 import React from "react";
 import { Card } from "antd";
 
+const { Meta } = Card;
+
 const ProfileCard = ({ title, url, age }) => {
   const onSwipe = (direction) => {
     console.log("You swiped: " + direction);
@@ -26,29 +28,17 @@ const ProfileCard = ({ title, url, age }) => {
             alt="example"
             src={url}
             style={{
-              borderRadius: "10px",
+              borderRadius: "10px 10px 0 0",
             }}
           />
         }
       >
-        <div
-          style={{
-            width: "100%",
-            margin: "0px",
-            padding: "0px 0px 0px 10px",
-            position: "absolute",
-            bottom: "5px",
-            display: "flex",
-            flexDirection: "column",
-            backgroundColor: "rgba(0,0,1,0.5)",
-          }}
-        >
-          <span className="text-2xl font-bold">
-            {title} : {age}
-          </span>
-          <span className="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </span>
+        <div className="flex justify-center items-center h-full p-4">
+          <div className="self-end">
+            <span className="text-2xl font-bold self-end">
+              {`${title}, ${age}`}
+            </span>
+          </div>
         </div>
       </Card>
     </div>
