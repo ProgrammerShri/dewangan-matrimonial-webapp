@@ -38,11 +38,13 @@ const msgs = [
 const ChatScreen = () => {
   return (
     <>
-      {msgs.map((msg) => (
-        <div key={msg.id} className="w-full">
-          <Chat user={msg.user} />
-        </div>
-      ))}
+      <div className="">
+        {msgs.map((msg) => (
+          <div key={msg.id} className="w-full">
+            <Chat user={msg.user} />
+          </div>
+        ))}
+      </div>
     </>
   );
 };

@@ -6,7 +6,7 @@ import HeartIcon from "../../assets/svgs/HeartIcon";
 const Chat = ({ user }) => {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-center items-start h-full w-full cursor-pointer m-1">
+    <div className="flex justify-center items-start h-full w-full cursor-pointer m-1 ">
       <div
         className="flex justify-start items-start w-full md:w-1/3 p-3 border rounded-xl"
         onClick={() => navigate(`/messages/${user._id}`)}

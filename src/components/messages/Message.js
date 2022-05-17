@@ -7,9 +7,9 @@ const Message = () => {
   const navigate = useNavigate();
   const [option, setOption] = React.useState(false);
   return (
-    <div className="flex flex-col justify-start items-center h-full my-20  w-full">
+    <div className="flex flex-col justify-start items-center h-full my-20 w-full ">
       {/* Heading Section */}
-      <div className=" flex justify-start items-center w-full bg-gray-900 fixed top-12 mt-1">
+      <div className=" flex justify-start items-center w-full bg-gray-900 fixed top-0">
         <div className="flex justify-between items-center  w-full">
           <span
             onClick={() => navigate("/messages")}
