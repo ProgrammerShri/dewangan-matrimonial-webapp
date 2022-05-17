@@ -6,25 +6,32 @@ import Navbar from "./components/Navbar";
 import AccountPage from "./pages/AccountPage";
 import ExplorePage from "./pages/ExplorePage";
 import FavouritePage from "./pages/FavouritePage";
-import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 import MatchesPage from "./pages/MatchesPage";
 import MessagesPage from "./pages/MessagesPage";
+import {
+  DashboardRoute,
+  LoginRoute,
+  MessagesRoute,
+  SignUpRoute,
+} from "./routes/routes";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<DashboardRoute />} />
           <Route path="/matches" element={<MatchesPage />} />
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="/favourite" element={<FavouritePage />} />
           <Route path="/account" element={<AccountPage />} />
-          <Route path="/messages" element={<MessagesPage />} />
+          <Route path="/messages" element={<MessagesRoute />} />
           <Route path="/messages/:id" element={<Message />} />
+          <Route path="/login" element={<LoginRoute />} />
+          <Route path="/signup" element={<SignUpRoute />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );
