@@ -40,7 +40,7 @@ const ChatScreen = () => {
     <>
       <div className="">
         {msgs.map((msg) => (
-          <div key={msg.id} className="w-full">
+          <div key={msg.id} className="w-full ">
             <Chat user={msg.user} />
           </div>
         ))}

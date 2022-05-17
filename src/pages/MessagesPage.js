@@ -7,7 +7,7 @@ const MessagesPage = () => {
       <h1 className="text-2xl bg-gray-900 text-white w-full text-center py-4 fixed z-50 top-0">
         MESSAGES
       </h1>
-      <div className="w-full my-16">
+      <div className="w-full my-16 h-full">
         <ChatScreen />
         <ChatScreen />
         <ChatScreen />

@@ -7,7 +7,7 @@ const Message = () => {
   const navigate = useNavigate();
   const [option, setOption] = React.useState(false);
   return (
-    <div className="flex flex-col justify-start items-center h-screen w-ful">
+    <div className="flex flex-col justify-start items-center h-screen w-full">
       {/* Heading Section */}
       <div className=" flex justify-start items-center w-full bg-gray-900 fixed top-0">
         <div className="flex justify-between items-center  w-full">
@@ -35,7 +35,7 @@ const Message = () => {
       </div>
 
       {/* Chat Section  */}
-      <div className="border overflow-y-auto h-full shadow-2xl ">
+      <div className="border overflow-y-auto  h-full shadow-2xl ">
         <div className="overflow-x-hidden w-full">
           <div className="clearfix">
             <div className="bg-gray-300 w-3/4 mx-4 my-2 p-2 rounded-lg">
