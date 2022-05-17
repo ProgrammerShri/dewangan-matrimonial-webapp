@@ -2,6 +2,8 @@ import { Avatar, Divider, Form, Input, Button, Space } from "antd";
 import React from "react";
 import { Collapse } from "antd";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
+import { MdModeEditOutline } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
 
 const { Panel } = Collapse;
 
@@ -23,11 +25,11 @@ const AccountPage = () => {
   return (
     <div className="flex flex-col justify-start items-center h-full py-20  w-full">
       <div className="flex flex-col justify-center items-center sticky top-12 z-50 bg-white w-full">
-        <div className="border-2 border-black rounded-full p-1">
+        <div className="border border-black  rounded-full p-1">
           <Avatar
             size={100}
-            icon="user"
-            className="border-2 border-black p-2"
+            icon={<FaUser className="h-full w-full" />}
+            className="border-2 p-2"
           />
         </div>
         <div className="text-center text-2xl"> Jhon Doe, 21 </div>
@@ -37,7 +39,20 @@ const AccountPage = () => {
 
       <div className="w-full md:w-1/2">
         <Collapse defaultActiveKey={[]} onChange={callback}>
-          <Panel header="Basic Personal Details" key="1">
+          <Panel
+            header="Basic Personal Details"
+            key="1"
+            extra={
+              <MdModeEditOutline
+                className="text-2xl text-gray-500"
+                onClick={(event) => {
+                  alert("EDIT");
+                  event.stopPropagation();
+                  console.log("EDIT");
+                }}
+              />
+            }
+          >
             Name : Jhon Doe
             <br />
             Age : 21
@@ -79,7 +94,20 @@ const AccountPage = () => {
             Family Locations : Mumbai
             <br />
           </Panel>
-          <Panel header="Education and Carrer" key="2">
+          <Panel
+            header="Education and Carrer"
+            key="2"
+            extra={
+              <MdModeEditOutline
+                className="text-2xl text-gray-500"
+                onClick={(event) => {
+                  alert("EDIT");
+                  event.stopPropagation();
+                  console.log("EDIT");
+                }}
+              />
+            }
+          >
             Education : B.Tech
             <br />
             College : Mumbai University
@@ -95,7 +123,20 @@ const AccountPage = () => {
             Annual Income : 10 Lakhs
             <br />
           </Panel>
-          <Panel header="Family" key="4">
+          <Panel
+            header="Family"
+            key="4"
+            extra={
+              <MdModeEditOutline
+                className="text-2xl text-gray-500"
+                onClick={(event) => {
+                  alert("EDIT");
+                  event.stopPropagation();
+                  console.log("EDIT");
+                }}
+              />
+            }
+          >
             Father Name : Jhon Doe
             <br />
             Mother Name : Jhon Doe
@@ -115,7 +156,20 @@ const AccountPage = () => {
             Family Locations : Mumbai
             <br />
           </Panel>
-          <Panel header="Habbit" key="5">
+          <Panel
+            header="Habbit"
+            key="5"
+            extra={
+              <MdModeEditOutline
+                className="text-2xl text-gray-500"
+                onClick={(event) => {
+                  alert("EDIT");
+                  event.stopPropagation();
+                  console.log("EDIT");
+                }}
+              />
+            }
+          >
             Food : Vegetarian
             <br />
             Drink : Non-Alcoholic
@@ -123,7 +177,20 @@ const AccountPage = () => {
             Smoke : No
             <br />
           </Panel>
-          <Panel header="Special About You (Add Here)" key="6">
+          <Panel
+            header="Special About You (Add Here)"
+            key="6"
+            extra={
+              <MdModeEditOutline
+                className="text-2xl text-gray-500"
+                onClick={(event) => {
+                  alert("EDIT");
+                  event.stopPropagation();
+                  console.log("EDIT");
+                }}
+              />
+            }
+          >
             <Form
               name="dynamic_form_nest_item"
               onFinish={onFinish}

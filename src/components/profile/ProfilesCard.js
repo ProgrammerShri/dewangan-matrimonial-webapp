@@ -1,6 +1,4 @@
 import React from "react";
-import axios from "axios";
-import { baseURL_API } from "../../utils/constants";
 import TinderCard from "react-tinder-card";
 import ProfileCard from "./ProfileCard";
 import { posts } from "../../data.js";

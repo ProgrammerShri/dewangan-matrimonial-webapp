@@ -2,7 +2,6 @@ import { Skeleton } from "antd";
 import React, { Suspense } from "react";
 import FooterLayout from "../layouts/FooterLayout";
 const HomeLayout = React.lazy(() => import("../layouts/HomeLayout"));
-const FooterBar = React.lazy(() => import("../components/Footer"));
 
 const LoginPage = React.lazy(() => import("../pages/LoginPage"));
 const LoginRoute = () => (
@@ -46,4 +45,15 @@ const MessagesRoute = () => (
   </>
 );
 
-export { LoginRoute, DashboardRoute, SignUpRoute, MessagesRoute };
+const AccountPage = React.lazy(() => import("../pages/AccountPage"));
+const AccountRoute = () => (
+  <>
+    <Suspense fallback={<Skeleton />}>
+      <FooterLayout>
+        <AccountPage />
+      </FooterLayout>
+    </Suspense>
+  </>
+);
+
+export { LoginRoute, DashboardRoute, SignUpRoute, MessagesRoute, AccountRoute };
