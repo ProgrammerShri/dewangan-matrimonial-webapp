@@ -120,7 +120,7 @@ const Footer = () => {
               <span className="tab tab-kategori block text-xs">Matches</span>
             </Link>
             <Link
-              to="/explore"
+              to="/messages"
               className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
             >
               <svg

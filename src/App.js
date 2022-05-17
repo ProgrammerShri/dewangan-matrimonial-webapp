@@ -1,12 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
+import Message from "./components/messages/Message";
 import Navbar from "./components/Navbar";
 import AccountPage from "./pages/AccountPage";
 import ExplorePage from "./pages/ExplorePage";
 import FavouritePage from "./pages/FavouritePage";
 import HomePage from "./pages/HomePage";
 import MatchesPage from "./pages/MatchesPage";
+import MessagesPage from "./pages/MessagesPage";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="/favourite" element={<FavouritePage />} />
           <Route path="/account" element={<AccountPage />} />
+          <Route path="/messages" element={<MessagesPage />} />
+          <Route path="/messages/:id" element={<Message />} />
         </Routes>
         <Footer />
       </BrowserRouter>
